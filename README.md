@@ -10,7 +10,7 @@ It gives you the ability to analyze any data set by using the searching/aggregat
 the visualization power of Kibana.
 
 *:information_source: The Docker images backing this stack include [Stack Features][stack-features] (formerly X-Pack)
-with [paid features][paid-features] enabled by default (see [How to disable paid features](#how-to-disable-paid-features)
+with [paid features][paid-features] **disabled by default** (see [How to enable paid features](#how-to-enable-paid-features)
 to disable them). **The [trial license][trial-license] is valid for 30 days**.*
 
 Based on the official Docker images from Elastic:
@@ -287,10 +287,10 @@ Logstash will be expecting a [`log4j2.properties`][log4j-props] file for its own
 Please refer to the following documentation page for more details about how to configure Logstash inside Docker
 containers: [Configuring Logstash for Docker][ls-docker].
 
-### How to disable paid features
+### How to enable paid features
 
-Switch the value of Elasticsearch's `xpack.license.self_generated.type` option from `trial` to `basic` (see [License
-settings][trial-license]).
+In `elasticsearch.yml` switch the value of Elasticsearch's `xpack.license.self_generated.type` option from `basic` to `trial` (see [License
+settings][trial-license]).  
 
 ### How to scale out the Elasticsearch cluster
 
